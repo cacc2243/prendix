@@ -14,5 +14,21 @@ export default defineConfig({
   build: {
     outDir: "dist/static",
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom"],
+          "router": ["@tanstack/react-router", "@tanstack/react-query"],
+          "motion": ["framer-motion"],
+          "ui": ["lucide-react", "class-variance-authority", "clsx", "tailwind-merge"],
+          "radix": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-scroll-area",
+            "@radix-ui/react-slot",
+          ],
+        },
+      },
+    },
   },
 });
