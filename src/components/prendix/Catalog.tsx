@@ -1736,19 +1736,9 @@ function PaywallModal({ series, onClose }: { series: Series | null; onClose: () 
                 </div>
 
                 <div className="relative mt-5">
-                  {/* glow pulse ring */}
-                  <motion.div
-                    aria-hidden
-                    className="absolute inset-0 rounded-full"
-                    style={{ background: "rgba(255,58,120,0.45)" }}
-                    animate={{ scale: [1, 1.06, 1], opacity: [0.5, 0.15, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                  />
                   <motion.button
                     onClick={() => setShowUpsell(true)}
                     className="prendix-btn-primary relative w-full rounded-full py-4 text-base font-bold inline-flex items-center justify-center gap-2 shadow-[0_15px_40px_-10px_rgba(255,58,120,0.7)]"
-                    animate={{ scale: [1, 1.025, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     whileTap={{ scale: 0.97 }}
                   >
                     <Play className="size-5 fill-white" />
@@ -1853,13 +1843,6 @@ function PaywallModal({ series, onClose }: { series: Series | null; onClose: () 
 
                         {/* CTA button */}
                         <div className="mt-5 relative">
-                          <motion.div
-                            aria-hidden
-                            className="absolute inset-0 rounded-full"
-                            style={{ background: "rgba(255,58,120,0.4)" }}
-                            animate={{ scale: [1, 1.05, 1], opacity: [0.5, 0.1, 0.5] }}
-                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                          />
                           <motion.a
                             href={chosen === "anual"
                               ? "https://go.perfectpay.com.br/PPU38CQCULP"
@@ -1867,8 +1850,6 @@ function PaywallModal({ series, onClose }: { series: Series | null; onClose: () 
                             target="_blank"
                             rel="noopener noreferrer"
                             className="prendix-btn-primary relative w-full rounded-full py-5 text-[16px] font-black inline-flex items-center justify-center gap-2.5 shadow-[0_15px_40px_-8px_rgba(255,58,120,0.7)]"
-                            animate={{ scale: [1, 1.02, 1] }}
-                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                             whileTap={{ scale: 0.97 }}
                           >
                             🔥 Sim! Quero +18 por R$ {upsellPrice}/mês
