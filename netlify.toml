@@ -2,7 +2,11 @@
   command = "bun run build:netlify"
   publish = "dist/static"
 
+[build.environment]
+  NODE_VERSION = "20"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
