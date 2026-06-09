@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:netlify": "vite build --config vite.static.config.ts",
     "build:dev": "vite build --mode development",
+    "start": "node server.node.mjs",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."

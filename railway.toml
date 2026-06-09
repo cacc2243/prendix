@@ -1,0 +1,7 @@
+[build]
+  builder = "nixpacks"
+
+[deploy]
+  startCommand = "node server.node.mjs"
+  healthcheckPath = "/"
+  restartPolicyType = "on_failure"
