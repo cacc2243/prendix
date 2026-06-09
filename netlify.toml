@@ -1,6 +1,6 @@
 [build]
-  command = "bun run build"
-  publish = "dist/client"
+  command = "bun run build:netlify"
+  publish = "dist/static"
 
 [[redirects]]
   from = "/*"
